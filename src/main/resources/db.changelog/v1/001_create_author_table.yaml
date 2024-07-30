@@ -1,0 +1,20 @@
+databaseChangeLog:
+  -  changeSet:
+       id:  001_create_author_table
+       author:  Gunel Hasanova
+       changes:
+         -  createTable:
+              tableName:  authors
+              columns:
+                -  column:
+                     name:  id
+                     type:  BIGINT
+                     autoIncrement: true
+                     constraints:
+                       primaryKey: true
+                       nullable: false
+                - column:
+                    name: full_name
+                    type: varchar(40)
+                    constraints:
+                      nullable: false

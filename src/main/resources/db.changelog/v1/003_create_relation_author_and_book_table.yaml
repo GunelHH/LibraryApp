@@ -1,0 +1,14 @@
+databaseChangeLog:
+  - changeSet:
+      id: relationBetween_author_and_book_table
+      author: Gunel Hasanova
+      changes:
+        - addForeignKeyConstraints:
+            baseTableName: books
+            baseColumnNames: author_id
+            referencedTableName: authors
+            referencedColumnNames: id
+            constraintName: fk_book_authors
+            onDelete: CASCADE
+            onUpdate: RESTRICT
+
